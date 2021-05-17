@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Movie Collection</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="register_button">Register</string>
+    <string name="add_button">Add to Collection</string>
+    <string name="view_button">View Collection</string>
+</resources>
