@@ -5,7 +5,7 @@ This is an Android application to scan the barcodes of a DVD or Blu-ray and stor
 movies that they have in their personal collections. I created this application for personal use, and I thought it would be a great way to learn about application development. 
 
 ### Built With
-This application was built with Android Studio. It also uses Firebase to store the collection information for the user.
+This application was written in Java and built with Android Studio. It also uses Firebase to store the collection information for the user.
 
 ## Installation
 Because this application was made for personal use, it is not available on any app stores. However, all the necessary files are included here and they can be downloaded.
