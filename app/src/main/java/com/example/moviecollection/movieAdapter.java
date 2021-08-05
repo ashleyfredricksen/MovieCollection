@@ -1,8 +1,10 @@
 package com.example.moviecollection;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,13 +15,30 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class movieAdapter extends FirebaseRecyclerAdapter<MovieInfo, movieAdapter.movieViewHolder> {
-    public movieAdapter(@NonNull FirebaseRecyclerOptions<MovieInfo> options) {
+//    public ArrayList<MovieInfo> movieInfoArrayList;
+//    public ArrayList<MovieInfo> movieInfoArrayListFiltered;
+//    Context context;
+
+    public movieAdapter(FirebaseRecyclerOptions<MovieInfo> options) {
         super(options);
     }
 
-    protected void onBindViewHolder(@NonNull movieViewHolder holder, int position, @NonNull MovieInfo model) {
-        holder.title.setText(model.getMovieTitle());
+//    @Override
+//    public int getItemCount() {
+//        return movieInfoArrayList.size();
+//    }
+//
+//    public long getItemId(int position) {
+//        return position;
+//    }
+
+    public void onBindViewHolder(@NonNull movieViewHolder holder, int position, @NonNull MovieInfo model) {
+//        final MovieInfo movieInfo = movieInfoArrayList.get(position);
+        holder.title.setText(model.getMovieTitle());//model.getMovieTitle());
         Picasso.get().load(model.getMovieURL()).into(holder.poster);
     }
 
@@ -38,4 +57,5 @@ public class movieAdapter extends FirebaseRecyclerAdapter<MovieInfo, movieAdapte
             poster = view.findViewById(R.id.movieImg);
         }
     }
+
 }

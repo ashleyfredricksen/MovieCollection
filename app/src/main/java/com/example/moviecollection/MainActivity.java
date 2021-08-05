@@ -148,4 +148,10 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         intializeDetector();
     }
+
+    public void viewCollection(View view) {
+        // button click that displays the user's movie collection
+        Intent intent = new Intent(MainActivity.this, ViewCollection.class);
+        startActivity(intent);
+    }
 }
